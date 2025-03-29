@@ -17,7 +17,7 @@ public class BaseTest {
         options.addArguments("--remote-allow-origins=*");
         options.addArguments("--no-sandbox");  // Prevents security issues in CI/CD
         options.addArguments("--disable-dev-shm-usage");  // Fixes shared memory issues
-        options.addArguments("--headless");  // Runs Chrome without GUI in GitHub Actions
+        options.addArguments("--headless=new");  // Runs Chrome without GUI in GitHub Actions
         options.addArguments("--disable-gpu");
         options.addArguments("--window-size=1920,1080");
         options.addArguments("--user-data-dir=/tmp/chrome-user-data" + System.currentTimeMillis());  // Unique user data directory
