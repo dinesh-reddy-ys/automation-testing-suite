@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
+  <suite started-at="2025-03-29T14:24:05 IST" name="Automation Suite" finished-at="2025-03-29T14:24:09 IST" duration-ms="3778">
+    <groups>
+    </groups>
+    <test started-at="2025-03-29T14:24:05 IST" name="Google Search Test" finished-at="2025-03-29T14:24:09 IST" duration-ms="3778">
+      <class name="com.automation.tests.GoogleSearchTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.automation.tests.GoogleSearchTest@28eaa59a]" started-at="2025-03-29T14:24:05 IST" name="setup" finished-at="2025-03-29T14:24:07 IST" duration-ms="1960" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="searchTest()[pri:0, instance:com.automation.tests.GoogleSearchTest@28eaa59a]" started-at="2025-03-29T14:24:07 IST" name="searchTest" finished-at="2025-03-29T14:24:08 IST" duration-ms="1770" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchTest -->
+      </class> <!-- com.automation.tests.GoogleSearchTest -->
+    </test> <!-- Google Search Test -->
+  </suite> <!-- Automation Suite -->
 </testng-results>
