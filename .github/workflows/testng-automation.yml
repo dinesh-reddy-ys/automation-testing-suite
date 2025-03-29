@@ -27,7 +27,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ~/.m2
-          key: maven-${{ runner.os }}-${{ hashFiles('Cinderella/pom.xml') }}
+          key: maven-${{ runner.os }}-${{ hashFiles('AutomationProject/pom.xml') }}
           restore-keys: maven-${{ runner.os }}
 
       - name: Install Chrome
