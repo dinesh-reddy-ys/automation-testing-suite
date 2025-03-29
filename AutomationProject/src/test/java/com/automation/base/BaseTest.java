@@ -20,7 +20,7 @@ public class BaseTest {
         options.addArguments("--headless=new");  // Runs Chrome without GUI in GitHub Actions
         options.addArguments("--disable-gpu");
         options.addArguments("--window-size=1920,1080");
-        options.addArguments("--user-data-dir=/tmp/chrome-user-data" + System.currentTimeMillis());  // Unique user data directory
+        //options.addArguments("--user-data-dir=/tmp/chrome-user-data" + System.currentTimeMillis());  // Unique user data directory
     	   	
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
