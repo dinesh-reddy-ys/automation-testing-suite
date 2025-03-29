@@ -30,6 +30,9 @@ jobs:
           key: maven-${{ runner.os }}-${{ hashFiles('AutomationProject/pom.xml') }}
           restore-keys: maven-${{ runner.os }}
 
+      - name: Kill chrome server
+        run: pkill -f chrome || true
+
       - name: Install Chrome
         run: sudo apt-get install -y google-chrome-stable
 
