@@ -21,8 +21,7 @@ public class BaseTest {
         options.addArguments("--disable-gpu");
         options.addArguments("--window-size=1920,1080");
         options.addArguments("--user-data-dir=/tmp/chrome-user-data" + System.currentTimeMillis());  // Unique user data directory
-    	
-    	
+    	   	
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
