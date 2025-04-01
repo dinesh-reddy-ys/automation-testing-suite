@@ -1,7 +1,7 @@
 <suite name="Automation Suite">
     <test name="Google Search Test">
         <classes>
-            <class name="com.automation.tests.GoogleSearchTest"/>
+            <class name="com.automation.tests.BookListTest"/>
         </classes>
     </test>
 </suite>

@@ -1,0 +1,45 @@
+name: Selenium TestNG CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest  # Use Linux environment
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Cache Maven dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.m2
+          key: maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: maven-
+
+      - name: Install Chrome
+        run: |
+          sudo apt update
+          sudo apt install -y google-chrome-stable
+
+      - name: Run Tests
+        run: mvn clean test
+
+      - name: Upload Test Reports (if failure)
+        if: failure()
+        uses: actions/upload-artifact@v3
+        with:
+          name: Test Reports
+          path: target/surefire-reports
