@@ -10,7 +10,7 @@ public class BookListTest extends BaseTest {
 	@Test
 	public void getBookList() {
 		
-		driver.get("https://demoqa.com");
+		driver.get("https://demoqa.com");//get link
 		HomePage home = new HomePage(driver);
 		home.scrollToElements();
 		home.clickOnElements();
