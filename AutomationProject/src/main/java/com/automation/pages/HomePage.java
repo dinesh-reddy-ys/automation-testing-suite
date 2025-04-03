@@ -1,12 +1,14 @@
 package com.automation.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.automation.utils.ScrollUtils;
+import com.automation.utils.WebDriverUtils;
 
 public class HomePage {
 	private WebDriver driver;
@@ -18,9 +20,13 @@ public class HomePage {
     
     
  // Constructor
-    public HomePage(WebDriver driver) {
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
+    public HomePage() {
+    	this.driver = WebDriverUtils.getDriver();
+    	if (this.driver == null) {
+            throw new IllegalStateException("Driver is not initialized before calling HomePage constructor");
+        }
+        
+        PageFactory.initElements( driver, this);
     }
     
   //Page Actions
@@ -29,7 +35,7 @@ public class HomePage {
     }
     //scroll to elements
     public void scrollToElements() {
-    	ScrollUtils.scrollToElement(driver, elements);
+    	ScrollUtils.scrollToElement(elements);
     	
     }
 

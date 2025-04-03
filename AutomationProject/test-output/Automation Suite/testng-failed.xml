@@ -3,13 +3,15 @@
 <suite name="Failed suite [Automation Suite]">
   <test thread-count="5" name="Google Search Test(failed)">
     <classes>
-      <class name="com.automation.tests.GoogleSearchTest">
+      <class name="com.automation.tests.BookListTest">
         <methods>
+          <include name="getBookList"/>
+          <include name="setupExtentReports"/>
+          <include name="flushExtentReports"/>
           <include name="setup"/>
           <include name="teardown"/>
-          <include name="searchTest"/>
         </methods>
-      </class> <!-- com.automation.tests.GoogleSearchTest -->
+      </class> <!-- com.automation.tests.BookListTest -->
     </classes>
   </test> <!-- Google Search Test(failed) -->
 </suite> <!-- Failed suite [Automation Suite] -->

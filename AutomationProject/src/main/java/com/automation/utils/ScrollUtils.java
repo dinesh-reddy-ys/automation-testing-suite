@@ -1,5 +1,7 @@
 package com.automation.utils;
 
+import java.sql.DriverManager;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -24,9 +26,12 @@ public class ScrollUtils {
     }
 
     // Scroll until an element is in view
-    public static void scrollToElement(WebDriver driver, WebElement element) {
+    public static void scrollToElement( WebElement element) {
+    	WebDriver driver = WebDriverUtils.getDriver();
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView(true);", element);
     }
+
+	
 
 }

@@ -1,5 +1,12 @@
-<suite name="Automation Suite">
-    <test name="Google Search Test">
+<suite name="Automation cross browser Suite" parallel="tests" thread-count="2">
+    <test name="Chrome Test" value="chrome">
+    <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="com.automation.tests.BookListTest"/>
+        </classes>
+    </test>
+    <test name="Edge test" value="edge">
+    <parameter name="browser" value="edge"/>
         <classes>
             <class name="com.automation.tests.BookListTest"/>
         </classes>

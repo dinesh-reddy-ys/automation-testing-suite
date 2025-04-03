@@ -6,6 +6,8 @@
       <class name="com.automation.tests.BookListTest">
         <methods>
           <include name="getBookList"/>
+          <include name="flushExtentReports"/>
+          <include name="setupExtentReports"/>
           <include name="setup"/>
           <include name="teardown"/>
         </methods>
