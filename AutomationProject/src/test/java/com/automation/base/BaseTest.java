@@ -44,15 +44,7 @@ public class BaseTest {
     	
     	
         //Open browser
-        if(browser.equalsIgnoreCase("chrome")) {
-        	WebDriverUtils.setDriver(new ChromeDriver());
-        }else
-        	if(browser.equalsIgnoreCase("edge")) {
-        	WebDriverUtils.setDriver(new EdgeDriver());       	
-        }
-        else {
-        	throw new IllegalArgumentException("Invalid browser" + browser);
-        }
+        WebDriverUtils.setDriver(browser);
         
         
     	
