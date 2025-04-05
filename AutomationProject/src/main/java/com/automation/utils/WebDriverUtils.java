@@ -8,7 +8,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class WebDriverUtils {
-private static ThreadLocal<WebDriver> driver = new ThreadLocal<WebDriver>();
+private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 	
 	//Method to return driver
 	public static WebDriver getDriver() {

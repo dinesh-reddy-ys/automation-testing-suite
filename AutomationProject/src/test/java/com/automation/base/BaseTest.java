@@ -1,7 +1,10 @@
 package com.automation.base;
 
 import java.io.File;
+import java.lang.reflect.Method;
 import java.sql.DriverManager;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -21,68 +24,89 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
-
+import com.automation.utils.ExtentReportManager;
+import com.automation.utils.ScreenshotUtils;
 import com.automation.utils.WebDriverUtils;
 
 public class BaseTest {
 	
-	public static ExtentReports extent;
-    public static ExtentTest test;
+	// Store ExtentTest in a thread-safe way for parallel tests
+    public static ThreadLocal<ExtentTest> test = new ThreadLocal<>();
+    
+    // Store WebDriver per thread
     protected static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+    
+    // Store ExtentReports per browser (no need for static single instance now)
+    private static Map<String, ExtentReports> reportMap = new HashMap<>();
+    
+    //Store the current browser name per thread
+    private static ThreadLocal<String> currentBrowser = new ThreadLocal<>();
+    
 	
-	 @BeforeSuite
-	    public void setupExtentReports() {
-	        String reportPath = System.getProperty("user.dir") + "/reports/ExtentReport.html";
-	        ExtentSparkReporter reporter = new ExtentSparkReporter(new File(reportPath));
-	        extent = new ExtentReports();
-	        extent.attachReporter(reporter);
-	    }
+
     
 	@Parameters("browser")
     @BeforeMethod
-    public void setup( String browser) {
+    public void setup(@Optional("chrome") String browser, Method method) {
     	
-    	
-        //Open browser
+		// Save current browser to ThreadLocal
+		currentBrowser.set(browser);
+		
+		
+        //Initialize webDriver for this thread
         WebDriverUtils.setDriver(browser);
         
-        
-    	
-       
-        //Maximize the window
+        // ✅ Confirm driver is stored
+        WebDriver driverInstance = WebDriverUtils.getDriver();
+        if (driverInstance == null) {
+            throw new RuntimeException("WebDriver was not initialized properly.");
+        }
+              
+        //Maximize browser window
          WebDriverUtils.getDriver().manage().window().maximize();
+         
+         // Initialize ExtentReports instance for the browser if not already done
+         if (!reportMap.containsKey(browser)) {
+             ExtentReports report = ExtentReportManager.getReporter(browser);
+             reportMap.put(browser, report);
+         }
+         
+         // Create a new ExtentTest for this test method
+         ExtentTest extentTest = reportMap.get(browser).createTest(method.getName() + " [" + browser + "]");
+         test.set(extentTest);
     }
 
     @AfterMethod
     public void teardown(ITestResult result) {
+    	ExtentTest extentTest = test.get();
     	 if (result.getStatus() == ITestResult.FAILURE) {
-             test.fail("Test Failed: " + result.getThrowable());
-             String screenshotPath = captureScreenshot(result.getName());
-             test.log(Status.FAIL, "Test Failed: " + result.getThrowable());
-             test.addScreenCaptureFromPath(screenshotPath);
+    		 extentTest.fail("Test Failed: " + result.getThrowable());
+    		 extentTest.log(Status.FAIL, "Test Failed: " + result.getThrowable());
+    		 extentTest.addScreenCaptureFromPath(ScreenshotUtils.captureScreenshot(result.getTestName()));
          } else if (result.getStatus() == ITestResult.SUCCESS) {
-             test.pass("Test Passed");
+        	 extentTest.pass("Test Passed");
          } else if (result.getStatus() == ITestResult.SKIP) {
-             test.skip("Test Skipped");
+        	 extentTest.skip("Test Skipped");
          }
         WebDriverUtils.quitDriver();
     }
     
     @AfterSuite
     public void flushExtentReports() {
-        extent.flush();
+    	 for (ExtentReports report : reportMap.values()) {
+             report.flush();
+         }
     }
     
-    //Method to capture screenshot by passing a String as arguments
-    public String captureScreenshot(String testName) {
-        try {
-            File srcFile = ((TakesScreenshot) WebDriverUtils.getDriver()).getScreenshotAs(OutputType.FILE);
-            String screenshotPath = System.getProperty("user.dir") + "/screenshots/" + testName + ".png";
-            FileUtils.copyFile(srcFile, new File(screenshotPath));
-            return screenshotPath;
-        } catch (Exception e) {
-            System.out.println("Error while taking screenshot: " + e.getMessage());
-            return null;
-        }
+ // Utility method to get driver in test classes
+    public WebDriver getDriver() {
+        return driver.get();
     }
+
+    // Utility method to get ExtentTest in test classes
+    public ExtentTest getTest() {
+        return test.get();
+    }
+    
+    
 }
