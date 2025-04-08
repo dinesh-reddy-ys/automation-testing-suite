@@ -2,47 +2,12 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-05T17:30:07 IST" name="Automation cross browser Suite" finished-at="2025-04-05T17:30:16 IST" duration-ms="8643">
+  <suite started-at="2025-04-08T11:55:04 IST" name="Automation cross browser Suite" finished-at="2025-04-08T11:55:16 IST" duration-ms="11549">
     <groups>
     </groups>
-    <test started-at="2025-04-05T17:30:07 IST" name="Chrome Test" finished-at="2025-04-05T17:30:14 IST" duration-ms="7254">
+    <test started-at="2025-04-08T11:55:04 IST" name="Edge test" finished-at="2025-04-08T11:55:15 IST" duration-ms="11468">
       <class name="com.automation.tests.BookListTest">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.automation.tests.BookListTest@661972b0]" started-at="2025-04-05T17:30:07 IST" name="setup" finished-at="2025-04-05T17:30:09 IST" duration-ms="2287" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[public void com.automation.tests.BookListTest.getBookList()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="getBookList()[pri:0, instance:com.automation.tests.BookListTest@661972b0]" started-at="2025-04-05T17:30:09 IST" name="getBookList" finished-at="2025-04-05T17:30:14 IST" duration-ms="4672" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getBookList -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automation.tests.BookListTest@661972b0]" started-at="2025-04-05T17:30:14 IST" name="teardown" finished-at="2025-04-05T17:30:14 IST" duration-ms="248" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=getBookList status=SUCCESS method=BookListTest.getBookList()[pri:0, instance:com.automation.tests.BookListTest@661972b0] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- com.automation.tests.BookListTest -->
-    </test> <!-- Chrome Test -->
-    <test started-at="2025-04-05T17:30:07 IST" name="Edge test" finished-at="2025-04-05T17:30:16 IST" duration-ms="8643">
-      <class name="com.automation.tests.BookListTest">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.automation.tests.BookListTest@3febb011]" started-at="2025-04-05T17:30:07 IST" name="setup" finished-at="2025-04-05T17:30:11 IST" duration-ms="3533" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.automation.tests.BookListTest@3febb011]" started-at="2025-04-08T11:55:04 IST" name="setup" finished-at="2025-04-08T11:55:11 IST" duration-ms="6729" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -58,11 +23,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="getBookList()[pri:0, instance:com.automation.tests.BookListTest@3febb011]" started-at="2025-04-05T17:30:11 IST" name="getBookList" finished-at="2025-04-05T17:30:15 IST" duration-ms="4758" status="PASS">
+        <test-method signature="getBookList()[pri:0, instance:com.automation.tests.BookListTest@3febb011]" started-at="2025-04-08T11:55:11 IST" name="getBookList" finished-at="2025-04-08T11:55:15 IST" duration-ms="4029" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getBookList -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automation.tests.BookListTest@3febb011]" started-at="2025-04-05T17:30:15 IST" name="teardown" finished-at="2025-04-05T17:30:16 IST" duration-ms="308" status="PASS">
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automation.tests.BookListTest@3febb011]" started-at="2025-04-08T11:55:15 IST" name="teardown" finished-at="2025-04-08T11:55:15 IST" duration-ms="626" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -73,11 +38,46 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="flushExtentReports()[pri:0, instance:com.automation.tests.BookListTest@3febb011]" started-at="2025-04-05T17:30:16 IST" name="flushExtentReports" finished-at="2025-04-05T17:30:16 IST" duration-ms="525" status="PASS">
+        <test-method is-config="true" signature="flushExtentReports()[pri:0, instance:com.automation.tests.BookListTest@3febb011]" started-at="2025-04-08T11:55:16 IST" name="flushExtentReports" finished-at="2025-04-08T11:55:16 IST" duration-ms="843" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- flushExtentReports -->
       </class> <!-- com.automation.tests.BookListTest -->
     </test> <!-- Edge test -->
+    <test started-at="2025-04-08T11:55:04 IST" name="Chrome Test" finished-at="2025-04-08T11:55:16 IST" duration-ms="11549">
+      <class name="com.automation.tests.BookListTest">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.automation.tests.BookListTest@661972b0]" started-at="2025-04-08T11:55:04 IST" name="setup" finished-at="2025-04-08T11:55:10 IST" duration-ms="6276" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.automation.tests.BookListTest.getBookList()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="getBookList()[pri:0, instance:com.automation.tests.BookListTest@661972b0]" started-at="2025-04-08T11:55:10 IST" name="getBookList" finished-at="2025-04-08T11:55:15 IST" duration-ms="4660" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getBookList -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automation.tests.BookListTest@661972b0]" started-at="2025-04-08T11:55:15 IST" name="teardown" finished-at="2025-04-08T11:55:16 IST" duration-ms="532" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=getBookList status=SUCCESS method=BookListTest.getBookList()[pri:0, instance:com.automation.tests.BookListTest@661972b0] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.automation.tests.BookListTest -->
+    </test> <!-- Chrome Test -->
   </suite> <!-- Automation cross browser Suite -->
 </testng-results>
