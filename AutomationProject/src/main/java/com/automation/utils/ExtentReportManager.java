@@ -1,6 +1,5 @@
 package com.automation.utils;
 
-import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -10,8 +9,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
-
-import org.apache.commons.io.FileUtils;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
@@ -27,10 +24,7 @@ public class ExtentReportManager {
         
         String reportFile = reportDir + "/ExtentReport_" + browser + ".html";
         
-        //String jenkinsReportDir = reportDir + "/index.html";
-        
-        // This is the Jenkins-compatible directory we'll copy to
-        String jenkinsReportDir = System.getProperty("user.dir") + "/reports/index";
+        String jenkinsExpectedFile = reportDir + "/index.html";
         
         ExtentSparkReporter reporter = new ExtentSparkReporter(reportFile);
         reporter.config().setReportName("Automation Report - " + browser);
@@ -39,25 +33,14 @@ public class ExtentReportManager {
         extent.attachReporter(reporter);
         
         //After the report is flushed (later in test teardown), copy/rename file for jenkins
-//        Runtime.getRuntime().addShutdownHook(new Thread(() ->{
-//        	try {
-//        		Files.copy(Paths.get(reportFile), Paths.get(jenkinsExpectedFile),StandardCopyOption.REPLACE_EXISTING);
-//        	} catch(IOException e){
-//        		
-//        		e.printStackTrace();
-//        	}
-//        	
-//        }));
-     // After the report is flushed, copy the whole report directory for Jenkins
-        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
-            try {
-                FileUtils.copyDirectory(
-                    new File(reportDir),
-                    new File(jenkinsReportDir)
-                );
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+        Runtime.getRuntime().addShutdownHook(new Thread(() ->{
+        	try {
+        		Files.copy(Paths.get(reportFile), Paths.get(jenkinsExpectedFile),StandardCopyOption.REPLACE_EXISTING);
+        	} catch(IOException e){
+        		
+        		e.printStackTrace();
+        	}
+        	
         }));
         return extent;
     }
