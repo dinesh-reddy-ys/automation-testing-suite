@@ -72,6 +72,7 @@ public class LoginTest extends BaseTest {
 		login.enterPassword("");
 		login.clickLoginButton();
 		login.requiredMessageDisplayed();
+		
 	}
 	
 
