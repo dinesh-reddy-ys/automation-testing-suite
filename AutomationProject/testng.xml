@@ -2,13 +2,13 @@
     <test name="Chrome Test" >
     <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="com.automation.tests.BookListTest"/>
+            <class name="com.orangehrm.test.LoginTest"/>
         </classes>
     </test>
     <test name="Edge test">
     <parameter name="browser" value="edge"/>
         <classes>
-            <class name="com.automation.tests.BookListTest"/>
+            <class name="com.orangehrm.test.LoginTest"/>
         </classes>
     </test>
 </suite>

@@ -18,13 +18,21 @@ public class PracticeClass {
 	}
 	public static int name() {
 		
-		int[] arr = {1,1,2};
-		List<Integer> list = new ArrayList<>();
-		 for(int i : arr) {
-			 list.add(i);
-		 }
-		 List<Integer> li = list.stream().distinct().toList();
-		 return li.size();
+		char[] chars = {'a','d','c'};
+		Map<Character,Integer> value = new HashMap<>();
+		for(char c: chars) {
+			value.put(c,value.getOrDefault(c, 0)+1);
+		}
+		StringBuilder sb = new StringBuilder();
+		for(Map.Entry<Character,Integer> entry: value.entrySet()) {
+			sb.append(entry.getValue());
+			sb.append(entry.getKey());
+			
+		}
+		String str = sb.toString();
+		chars = str.toCharArray();
+		System.out.println(chars);
+		return chars.length;
 	}
 
 }
