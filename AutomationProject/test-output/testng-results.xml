@@ -1,52 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="12" passed="12" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-08T11:55:04 IST" name="Automation cross browser Suite" finished-at="2025-04-08T11:55:16 IST" duration-ms="11549">
+  <suite started-at="2025-04-13T19:28:51 IST" name="Automation cross browser Suite" finished-at="2025-04-13T19:30:10 IST" duration-ms="79255">
     <groups>
     </groups>
-    <test started-at="2025-04-08T11:55:04 IST" name="Edge test" finished-at="2025-04-08T11:55:15 IST" duration-ms="11468">
-      <class name="com.automation.tests.BookListTest">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.automation.tests.BookListTest@3febb011]" started-at="2025-04-08T11:55:04 IST" name="setup" finished-at="2025-04-08T11:55:11 IST" duration-ms="6729" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[edge]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[public void com.automation.tests.BookListTest.getBookList()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="getBookList()[pri:0, instance:com.automation.tests.BookListTest@3febb011]" started-at="2025-04-08T11:55:11 IST" name="getBookList" finished-at="2025-04-08T11:55:15 IST" duration-ms="4029" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getBookList -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automation.tests.BookListTest@3febb011]" started-at="2025-04-08T11:55:15 IST" name="teardown" finished-at="2025-04-08T11:55:15 IST" duration-ms="626" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=getBookList status=SUCCESS method=BookListTest.getBookList()[pri:0, instance:com.automation.tests.BookListTest@3febb011] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="flushExtentReports()[pri:0, instance:com.automation.tests.BookListTest@3febb011]" started-at="2025-04-08T11:55:16 IST" name="flushExtentReports" finished-at="2025-04-08T11:55:16 IST" duration-ms="843" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- flushExtentReports -->
-      </class> <!-- com.automation.tests.BookListTest -->
-    </test> <!-- Edge test -->
-    <test started-at="2025-04-08T11:55:04 IST" name="Chrome Test" finished-at="2025-04-08T11:55:16 IST" duration-ms="11549">
-      <class name="com.automation.tests.BookListTest">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.automation.tests.BookListTest@661972b0]" started-at="2025-04-08T11:55:04 IST" name="setup" finished-at="2025-04-08T11:55:10 IST" duration-ms="6276" status="PASS">
+    <test started-at="2025-04-13T19:28:51 IST" name="Chrome Test" finished-at="2025-04-13T19:29:58 IST" duration-ms="67406">
+      <class name="com.orangehrm.test.LoginTest">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.orangehrm.test.LoginTest@4567f35d]" started-at="2025-04-13T19:28:51 IST" name="setup" finished-at="2025-04-13T19:28:55 IST" duration-ms="4532" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -55,29 +16,378 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[public void com.automation.tests.BookListTest.getBookList()]]>
+                <![CDATA[public void com.orangehrm.test.LoginTest.testValidLogin() throws java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="getBookList()[pri:0, instance:com.automation.tests.BookListTest@661972b0]" started-at="2025-04-08T11:55:10 IST" name="getBookList" finished-at="2025-04-08T11:55:15 IST" duration-ms="4660" status="PASS">
+        <test-method signature="testValidLogin()[pri:1, instance:com.orangehrm.test.LoginTest@4567f35d]" started-at="2025-04-13T19:28:55 IST" name="testValidLogin" finished-at="2025-04-13T19:29:12 IST" duration-ms="17103" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getBookList -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automation.tests.BookListTest@661972b0]" started-at="2025-04-08T11:55:15 IST" name="teardown" finished-at="2025-04-08T11:55:16 IST" duration-ms="532" status="PASS">
+        </test-method> <!-- testValidLogin -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.orangehrm.test.LoginTest@4567f35d]" started-at="2025-04-13T19:29:12 IST" name="teardown" finished-at="2025-04-13T19:29:13 IST" duration-ms="511" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=getBookList status=SUCCESS method=BookListTest.getBookList()[pri:0, instance:com.automation.tests.BookListTest@661972b0] output={null}]]]>
+                <![CDATA[[TestResult name=testValidLogin status=SUCCESS method=LoginTest.testValidLogin()[pri:1, instance:com.orangehrm.test.LoginTest@4567f35d] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- com.automation.tests.BookListTest -->
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.orangehrm.test.LoginTest@4567f35d]" started-at="2025-04-13T19:29:13 IST" name="setup" finished-at="2025-04-13T19:29:14 IST" duration-ms="1179" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.orangehrm.test.LoginTest.testInvalidPassword() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testInvalidPassword()[pri:2, instance:com.orangehrm.test.LoginTest@4567f35d]" started-at="2025-04-13T19:29:14 IST" name="testInvalidPassword" finished-at="2025-04-13T19:29:31 IST" duration-ms="16879" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvalidPassword -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.orangehrm.test.LoginTest@4567f35d]" started-at="2025-04-13T19:29:31 IST" name="teardown" finished-at="2025-04-13T19:29:31 IST" duration-ms="465" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testInvalidPassword status=SUCCESS method=LoginTest.testInvalidPassword()[pri:2, instance:com.orangehrm.test.LoginTest@4567f35d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.orangehrm.test.LoginTest@4567f35d]" started-at="2025-04-13T19:29:31 IST" name="setup" finished-at="2025-04-13T19:29:33 IST" duration-ms="1228" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.orangehrm.test.LoginTest.testInvalidUsername()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testInvalidUsername()[pri:3, instance:com.orangehrm.test.LoginTest@4567f35d]" started-at="2025-04-13T19:29:33 IST" name="testInvalidUsername" finished-at="2025-04-13T19:29:39 IST" duration-ms="6756" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvalidUsername -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.orangehrm.test.LoginTest@4567f35d]" started-at="2025-04-13T19:29:39 IST" name="teardown" finished-at="2025-04-13T19:29:40 IST" duration-ms="303" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testInvalidUsername status=SUCCESS method=LoginTest.testInvalidUsername()[pri:3, instance:com.orangehrm.test.LoginTest@4567f35d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.orangehrm.test.LoginTest@4567f35d]" started-at="2025-04-13T19:29:40 IST" name="setup" finished-at="2025-04-13T19:29:41 IST" duration-ms="1360" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.orangehrm.test.LoginTest.testEmptyPasswordField()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testEmptyPasswordField()[pri:4, instance:com.orangehrm.test.LoginTest@4567f35d]" started-at="2025-04-13T19:29:41 IST" name="testEmptyPasswordField" finished-at="2025-04-13T19:29:46 IST" duration-ms="4622" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testEmptyPasswordField -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.orangehrm.test.LoginTest@4567f35d]" started-at="2025-04-13T19:29:46 IST" name="teardown" finished-at="2025-04-13T19:29:46 IST" duration-ms="401" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testEmptyPasswordField status=SUCCESS method=LoginTest.testEmptyPasswordField()[pri:4, instance:com.orangehrm.test.LoginTest@4567f35d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.orangehrm.test.LoginTest@4567f35d]" started-at="2025-04-13T19:29:46 IST" name="setup" finished-at="2025-04-13T19:29:47 IST" duration-ms="1253" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.orangehrm.test.LoginTest.testEmptyUsername()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testEmptyUsername()[pri:5, instance:com.orangehrm.test.LoginTest@4567f35d]" started-at="2025-04-13T19:29:47 IST" name="testEmptyUsername" finished-at="2025-04-13T19:29:52 IST" duration-ms="4826" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testEmptyUsername -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.orangehrm.test.LoginTest@4567f35d]" started-at="2025-04-13T19:29:52 IST" name="teardown" finished-at="2025-04-13T19:29:53 IST" duration-ms="331" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testEmptyUsername status=SUCCESS method=LoginTest.testEmptyUsername()[pri:5, instance:com.orangehrm.test.LoginTest@4567f35d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.orangehrm.test.LoginTest@4567f35d]" started-at="2025-04-13T19:29:53 IST" name="setup" finished-at="2025-04-13T19:29:54 IST" duration-ms="1048" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.orangehrm.test.LoginTest.testEmptyCredentials()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testEmptyCredentials()[pri:6, instance:com.orangehrm.test.LoginTest@4567f35d]" started-at="2025-04-13T19:29:54 IST" name="testEmptyCredentials" finished-at="2025-04-13T19:29:58 IST" duration-ms="4246" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testEmptyCredentials -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.orangehrm.test.LoginTest@4567f35d]" started-at="2025-04-13T19:29:58 IST" name="teardown" finished-at="2025-04-13T19:29:58 IST" duration-ms="269" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testEmptyCredentials status=SUCCESS method=LoginTest.testEmptyCredentials()[pri:6, instance:com.orangehrm.test.LoginTest@4567f35d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.orangehrm.test.LoginTest -->
     </test> <!-- Chrome Test -->
+    <test started-at="2025-04-13T19:28:51 IST" name="Edge test" finished-at="2025-04-13T19:30:10 IST" duration-ms="79255">
+      <class name="com.orangehrm.test.LoginTest">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.orangehrm.test.LoginTest@7f0eb4b4]" started-at="2025-04-13T19:28:51 IST" name="setup" finished-at="2025-04-13T19:28:56 IST" duration-ms="4906" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.orangehrm.test.LoginTest.testValidLogin() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testValidLogin()[pri:1, instance:com.orangehrm.test.LoginTest@7f0eb4b4]" started-at="2025-04-13T19:28:56 IST" name="testValidLogin" finished-at="2025-04-13T19:29:13 IST" duration-ms="17237" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidLogin -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.orangehrm.test.LoginTest@7f0eb4b4]" started-at="2025-04-13T19:29:13 IST" name="teardown" finished-at="2025-04-13T19:29:13 IST" duration-ms="519" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testValidLogin status=SUCCESS method=LoginTest.testValidLogin()[pri:1, instance:com.orangehrm.test.LoginTest@7f0eb4b4] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.orangehrm.test.LoginTest@7f0eb4b4]" started-at="2025-04-13T19:29:13 IST" name="setup" finished-at="2025-04-13T19:29:17 IST" duration-ms="3176" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.orangehrm.test.LoginTest.testInvalidPassword() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testInvalidPassword()[pri:2, instance:com.orangehrm.test.LoginTest@7f0eb4b4]" started-at="2025-04-13T19:29:17 IST" name="testInvalidPassword" finished-at="2025-04-13T19:29:33 IST" duration-ms="16306" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvalidPassword -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.orangehrm.test.LoginTest@7f0eb4b4]" started-at="2025-04-13T19:29:33 IST" name="teardown" finished-at="2025-04-13T19:29:33 IST" duration-ms="435" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testInvalidPassword status=SUCCESS method=LoginTest.testInvalidPassword()[pri:2, instance:com.orangehrm.test.LoginTest@7f0eb4b4] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.orangehrm.test.LoginTest@7f0eb4b4]" started-at="2025-04-13T19:29:33 IST" name="setup" finished-at="2025-04-13T19:29:37 IST" duration-ms="3224" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.orangehrm.test.LoginTest.testInvalidUsername()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testInvalidUsername()[pri:3, instance:com.orangehrm.test.LoginTest@7f0eb4b4]" started-at="2025-04-13T19:29:37 IST" name="testInvalidUsername" finished-at="2025-04-13T19:29:43 IST" duration-ms="6638" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvalidUsername -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.orangehrm.test.LoginTest@7f0eb4b4]" started-at="2025-04-13T19:29:43 IST" name="teardown" finished-at="2025-04-13T19:29:43 IST" duration-ms="265" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testInvalidUsername status=SUCCESS method=LoginTest.testInvalidUsername()[pri:3, instance:com.orangehrm.test.LoginTest@7f0eb4b4] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.orangehrm.test.LoginTest@7f0eb4b4]" started-at="2025-04-13T19:29:43 IST" name="setup" finished-at="2025-04-13T19:29:47 IST" duration-ms="3118" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.orangehrm.test.LoginTest.testEmptyPasswordField()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testEmptyPasswordField()[pri:4, instance:com.orangehrm.test.LoginTest@7f0eb4b4]" started-at="2025-04-13T19:29:47 IST" name="testEmptyPasswordField" finished-at="2025-04-13T19:29:52 IST" duration-ms="4912" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testEmptyPasswordField -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.orangehrm.test.LoginTest@7f0eb4b4]" started-at="2025-04-13T19:29:52 IST" name="teardown" finished-at="2025-04-13T19:29:52 IST" duration-ms="434" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testEmptyPasswordField status=SUCCESS method=LoginTest.testEmptyPasswordField()[pri:4, instance:com.orangehrm.test.LoginTest@7f0eb4b4] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.orangehrm.test.LoginTest@7f0eb4b4]" started-at="2025-04-13T19:29:52 IST" name="setup" finished-at="2025-04-13T19:29:55 IST" duration-ms="2992" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.orangehrm.test.LoginTest.testEmptyUsername()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testEmptyUsername()[pri:5, instance:com.orangehrm.test.LoginTest@7f0eb4b4]" started-at="2025-04-13T19:29:55 IST" name="testEmptyUsername" finished-at="2025-04-13T19:30:00 IST" duration-ms="4998" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testEmptyUsername -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.orangehrm.test.LoginTest@7f0eb4b4]" started-at="2025-04-13T19:30:00 IST" name="teardown" finished-at="2025-04-13T19:30:00 IST" duration-ms="468" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testEmptyUsername status=SUCCESS method=LoginTest.testEmptyUsername()[pri:5, instance:com.orangehrm.test.LoginTest@7f0eb4b4] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.orangehrm.test.LoginTest@7f0eb4b4]" started-at="2025-04-13T19:30:00 IST" name="setup" finished-at="2025-04-13T19:30:04 IST" duration-ms="3162" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.orangehrm.test.LoginTest.testEmptyCredentials()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testEmptyCredentials()[pri:6, instance:com.orangehrm.test.LoginTest@7f0eb4b4]" started-at="2025-04-13T19:30:04 IST" name="testEmptyCredentials" finished-at="2025-04-13T19:30:10 IST" duration-ms="6061" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testEmptyCredentials -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.orangehrm.test.LoginTest@7f0eb4b4]" started-at="2025-04-13T19:30:10 IST" name="teardown" finished-at="2025-04-13T19:30:10 IST" duration-ms="321" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testEmptyCredentials status=SUCCESS method=LoginTest.testEmptyCredentials()[pri:6, instance:com.orangehrm.test.LoginTest@7f0eb4b4] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="flushExtentReports()[pri:0, instance:com.orangehrm.test.LoginTest@7f0eb4b4]" started-at="2025-04-13T19:30:10 IST" name="flushExtentReports" finished-at="2025-04-13T19:30:11 IST" duration-ms="607" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flushExtentReports -->
+      </class> <!-- com.orangehrm.test.LoginTest -->
+    </test> <!-- Edge test -->
   </suite> <!-- Automation cross browser Suite -->
 </testng-results>
