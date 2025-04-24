@@ -5,10 +5,10 @@
     <classes>
       <class name="com.automation.tests.AlertsTest">
         <methods>
-          <include name="testAlerts"/>
           <include name="flushExtentReports"/>
           <include name="setup"/>
           <include name="teardown"/>
+          <include name="testFrames2"/>
         </methods>
       </class> <!-- com.automation.tests.AlertsTest -->
     </classes>

@@ -1,17 +1,18 @@
 package com.automation.tests;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.automation.base.BaseTest;
-import com.automation.pages.AlertsPage;
+import com.automation.pages.AlertsFramesWindowsPage;
 import com.automation.utils.WebDriverUtils;
 
-public class AlertsTest extends BaseTest{
-	
+public class AlertsTest extends BaseTest {
+
 	@Test
 	public void testAlerts() throws InterruptedException {
 		WebDriverUtils.getDriver().get("https://demoqa.com");
-		AlertsPage alerts = new AlertsPage();
+		AlertsFramesWindowsPage alerts = new AlertsFramesWindowsPage();
 		alerts.scrollToAlertsElements();
 		alerts.selectAlertsElements();
 		alerts.scrollToAlerts();
@@ -19,6 +20,51 @@ public class AlertsTest extends BaseTest{
 		alerts.clickAlertButton();
 		alerts.switchToAlert();
 		Thread.sleep(50000);
+	}
+
+	@Test()
+	public void testFrames1() {
+		WebDriverUtils.getDriver().get("https://demoqa.com");
+		AlertsFramesWindowsPage frames = new AlertsFramesWindowsPage();
+		frames.scrollToAlertsElements();
+		frames.selectAlertsElements();
+		frames.scrollToFramesTab();
+		frames.clickOnFramesTab();
+		frames.switchToFrame1();
+		// frames.getFrameText();
+		System.out.println(frames.getFrameText());
+		Assert.assertEquals(frames.getFrameText(), "This is a sample page", "Content from iframe is not as expected");
+		try {
+			Thread.sleep(50000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	@Test
+
+	public void testFrames2() {
+
+		WebDriverUtils.getDriver().get("https://demoqa.com");
+		AlertsFramesWindowsPage frames = new AlertsFramesWindowsPage();
+		frames.scrollToAlertsElements();
+		frames.selectAlertsElements();
+		frames.scrollToFramesTab();
+		frames.clickOnFramesTab();
+		frames.scrollToFrame2();
+		frames.switchToFrame2();
+		System.out.println(frames.getFrameText());
+
+	}
+	
+	public void testClass() {
+		BaseTest test = new AlertsTest();
+		
+	}
+	
+	public void get() {
+		System.out.println("child");
 	}
 
 }
