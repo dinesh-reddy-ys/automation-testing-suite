@@ -10,7 +10,7 @@ import com.automation.utils.WebDriverUtils;
 public class AlertsTest extends BaseTest {
 
 	@Test
-	public void testAlerts() throws InterruptedException {
+	public void testAlerts() {
 		WebDriverUtils.getDriver().get("https://demoqa.com");
 		AlertsFramesWindowsPage alerts = new AlertsFramesWindowsPage();
 		alerts.scrollToAlertsElements();
@@ -19,7 +19,12 @@ public class AlertsTest extends BaseTest {
 		alerts.selectAlerts();
 		alerts.clickAlertButton();
 		alerts.switchToAlert();
-		Thread.sleep(50000);
+		try {
+			Thread.sleep(50000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	@Test()

@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-24T16:07:00 IST" name="Default suite" finished-at="2025-04-24T16:07:03 IST" duration-ms="3166">
+  <suite started-at="2025-04-27T11:06:33 IST" name="Default suite" finished-at="2025-04-27T11:06:48 IST" duration-ms="15509">
     <groups>
     </groups>
-    <test started-at="2025-04-24T16:07:00 IST" name="Default test" finished-at="2025-04-24T16:07:03 IST" duration-ms="3166">
-      <class name="com.restapi.test.CreateUserTest">
-        <test-method signature="createUser()[pri:0, instance:com.restapi.test.CreateUserTest@145f66e3]" started-at="2025-04-24T16:07:00 IST" name="createUser" finished-at="2025-04-24T16:07:03 IST" duration-ms="3123" status="PASS">
+    <test started-at="2025-04-27T11:06:33 IST" name="Default test" finished-at="2025-04-27T11:06:48 IST" duration-ms="15509">
+      <class name="mobile.tests.LoginTest">
+        <test-method signature="testLogin()[pri:0, instance:mobile.tests.LoginTest@c730b35]" started-at="2025-04-27T11:06:33 IST" name="testLogin" finished-at="2025-04-27T11:06:48 IST" duration-ms="15444" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createUser -->
-      </class> <!-- com.restapi.test.CreateUserTest -->
+        </test-method> <!-- testLogin -->
+      </class> <!-- mobile.tests.LoginTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

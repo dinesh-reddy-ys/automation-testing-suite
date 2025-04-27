@@ -3,14 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.automation.tests.AlertsTest">
+      <class name="mobile.tests.LoginTest">
         <methods>
-          <include name="flushExtentReports"/>
-          <include name="setup"/>
-          <include name="teardown"/>
-          <include name="testFrames2"/>
+          <include name="testLogin"/>
         </methods>
-      </class> <!-- com.automation.tests.AlertsTest -->
+      </class> <!-- mobile.tests.LoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
