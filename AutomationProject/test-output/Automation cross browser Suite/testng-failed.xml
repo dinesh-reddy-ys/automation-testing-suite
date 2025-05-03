@@ -4,27 +4,32 @@
   <test thread-count="2" parallel="tests" name="Chrome Test(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.automation.tests.BookListTest">
+      <class name="com.orangehrm.test.LoginTest">
         <methods>
-          <include name="getBookList"/>
           <include name="flushExtentReports"/>
           <include name="setup"/>
+          <include name="testInvalidPassword"/>
           <include name="teardown"/>
         </methods>
-      </class> <!-- com.automation.tests.BookListTest -->
+      </class> <!-- com.orangehrm.test.LoginTest -->
     </classes>
   </test> <!-- Chrome Test(failed) -->
   <test thread-count="2" parallel="tests" name="Edge test(failed)">
     <parameter name="browser" value="edge"/>
     <classes>
-      <class name="com.automation.tests.BookListTest">
+      <class name="com.orangehrm.test.LoginTest">
         <methods>
-          <include name="getBookList"/>
+          <include name="testInvalidUsername"/>
+          <include name="testEmptyUsername"/>
+          <include name="testEmptyCredentials"/>
           <include name="flushExtentReports"/>
           <include name="setup"/>
+          <include name="testInvalidPassword"/>
+          <include name="testValidLogin"/>
           <include name="teardown"/>
+          <include name="testEmptyPasswordField"/>
         </methods>
-      </class> <!-- com.automation.tests.BookListTest -->
+      </class> <!-- com.orangehrm.test.LoginTest -->
     </classes>
   </test> <!-- Edge test(failed) -->
 </suite> <!-- Failed suite [Automation cross browser Suite] -->

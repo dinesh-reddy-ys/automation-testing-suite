@@ -63,13 +63,8 @@ public class AlertsTest extends BaseTest {
 
 	}
 	
-	public void testClass() {
-		BaseTest test = new AlertsTest();
-		
-	}
 	
-	public void get() {
-		System.out.println("child");
-	}
+	
+	
 
 }

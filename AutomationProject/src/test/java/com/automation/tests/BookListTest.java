@@ -18,7 +18,6 @@ public class BookListTest extends BaseTest {
 
 		
 		ExtentTest log = getTest();
-		
         WebDriverUtils.getDriver().get("https://demoqa.com");
 		log.info("Navigated to website");
 							
