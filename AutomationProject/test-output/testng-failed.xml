@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.restapi.test.UpdateBookTest">
+      <class name="com.restapi.test.PartialUpdateBookingTest">
         <methods>
-          <include name="updateBooking"/>
+          <include name="partialUpdateBooking"/>
         </methods>
-      </class> <!-- com.restapi.test.UpdateBookTest -->
+      </class> <!-- com.restapi.test.PartialUpdateBookingTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

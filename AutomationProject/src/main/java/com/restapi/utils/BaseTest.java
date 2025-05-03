@@ -28,7 +28,7 @@ public class BaseTest {
 				.contentType(ContentType.JSON)
 				.body(body.toString())
 				.post("https://restful-booker.herokuapp.com/booking");
-		
+		response.print();
 		// Assert that the response status code is 200 (OK)
 		int statusCode = response.getStatusCode();
 		Assert.assertEquals(statusCode, 200, "Status code should be 200, but it's not");

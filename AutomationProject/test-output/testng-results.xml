@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-03T09:10:11 IST" name="Default suite" finished-at="2025-05-03T09:10:20 IST" duration-ms="8764">
+  <suite started-at="2025-05-03T10:39:12 IST" name="Default suite" finished-at="2025-05-03T10:39:20 IST" duration-ms="8128">
     <groups>
     </groups>
-    <test started-at="2025-05-03T09:10:11 IST" name="Default test" finished-at="2025-05-03T09:10:20 IST" duration-ms="8764">
-      <class name="com.restapi.test.UpdateBookTest">
-        <test-method signature="updateBooking()[pri:0, instance:com.restapi.test.UpdateBookTest@1165b38]" started-at="2025-05-03T09:10:11 IST" name="updateBooking" finished-at="2025-05-03T09:10:20 IST" duration-ms="8672" status="PASS">
+    <test started-at="2025-05-03T10:39:12 IST" name="Default test" finished-at="2025-05-03T10:39:20 IST" duration-ms="8128">
+      <class name="com.restapi.test.DeleteBooking">
+        <test-method signature="deleteBooking()[pri:0, instance:com.restapi.test.DeleteBooking@1165b38]" started-at="2025-05-03T10:39:12 IST" name="deleteBooking" finished-at="2025-05-03T10:39:20 IST" duration-ms="8018" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- updateBooking -->
-      </class> <!-- com.restapi.test.UpdateBookTest -->
+        </test-method> <!-- deleteBooking -->
+      </class> <!-- com.restapi.test.DeleteBooking -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
