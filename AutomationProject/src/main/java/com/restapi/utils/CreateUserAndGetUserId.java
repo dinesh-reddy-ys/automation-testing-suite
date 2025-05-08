@@ -30,6 +30,23 @@ public class CreateUserAndGetUserId {
 		
 	}
 	
+	public void createUserAccount(String userName, String password) {
+		
+		// Create json body
+		JSONObject body = new JSONObject();
+		body.put("userName",userName);
+		body.put("password", password);
+		
+		
+		System.out.println("UserName: "+body.get("userName"));
+
+		Response response = RestAssured.given().contentType(ContentType.JSON).body(body.toString())
+				.post("https://demoqa.com/Account/v1/user");
+
+		response.print();
+		
+	}
+	
 	
 	
 	

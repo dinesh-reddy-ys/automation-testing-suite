@@ -10,9 +10,9 @@ import com.orangehrm.pages.HomePage;
 import com.orangehrm.pages.LoginPage;
 
 public class LoginTest extends BaseTest {
-	
+	@Override
 	@Test(priority = 1)
-	public void testValidLogin() throws InterruptedException {
+	public void testValidLogin() {
 		WebDriverUtils.getDriver().get("https://opensource-demo.orangehrmlive.com");
 		LoginPage login = new LoginPage();
 		login.enterUsername("admin");
@@ -22,8 +22,9 @@ public class LoginTest extends BaseTest {
 		home.verifyElement();
 				
 	}
+	@Override
 	@Test(priority = 2)
-	public void testInvalidPassword() throws InterruptedException {
+	public void testInvalidPassword() {
 		WebDriverUtils.getDriver().get("https://opensource-demo.orangehrmlive.com");
 		LoginPage login = new LoginPage();
 		login.enterUsername("admin");

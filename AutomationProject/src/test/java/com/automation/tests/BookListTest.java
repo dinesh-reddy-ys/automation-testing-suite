@@ -11,7 +11,7 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
 
-public class BookListTest extends BaseTest {
+public abstract class BookListTest extends BaseTest {
 
 	@Test
 	public void getBookList() {
@@ -20,6 +20,14 @@ public class BookListTest extends BaseTest {
 		ExtentTest log = getTest();
         WebDriverUtils.getDriver().get("https://demoqa.com");
 		log.info("Navigated to website");
+		HomePage homePage = new HomePage();
+		homePage.scrollToBookStoreAndClick();
+		try {
+			Thread.sleep(200000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 							
 	}
 

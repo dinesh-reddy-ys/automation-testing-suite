@@ -3,11 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.restapi.test.PartialUpdateBookingTest">
+      <class name="com.automation.tests.LoginTest">
         <methods>
-          <include name="partialUpdateBooking"/>
+          <include name="testLogin"/>
+          <include name="flushExtentReports"/>
+          <include name="setup"/>
+          <include name="teardown"/>
         </methods>
-      </class> <!-- com.restapi.test.PartialUpdateBookingTest -->
+      </class> <!-- com.automation.tests.LoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

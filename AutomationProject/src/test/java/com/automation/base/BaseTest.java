@@ -28,7 +28,7 @@ import com.automation.utils.ExtentReportManager;
 import com.automation.utils.ScreenshotUtils;
 import com.automation.utils.WebDriverUtils;
 
-public class BaseTest {
+public abstract class BaseTest {
 	
 	// Store ExtentTest in a thread-safe way for parallel tests
     public static ThreadLocal<ExtentTest> test = new ThreadLocal<>();
@@ -107,6 +107,11 @@ public class BaseTest {
     public ExtentTest getTest() {
         return test.get();
     }
+    
+    //Abstract method to enforce implementation in derived classes
+    public abstract void testValidLogin();
+
+	public abstract void testInvalidPassword();
     
     
 }
