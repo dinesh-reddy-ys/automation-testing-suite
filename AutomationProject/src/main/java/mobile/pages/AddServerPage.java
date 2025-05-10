@@ -53,7 +53,7 @@ public class AddServerPage {
 		// Click on the server dropdown
 		newServerInput.click();
 		// Enter the new server name
-		newServerInput.sendKeys("qa5.welldata.net");
+		newServerInput.sendKeys("server");
 	}
 
 	public void clickAddButton() {
@@ -87,7 +87,7 @@ public class AddServerPage {
 		//clear the input field
 		editServerInput.clear();
 		// Enter the new server name
-		editServerInput.sendKeys("qa6.welldata.net");
+		editServerInput.sendKeys("");
 	}
 	
 	public void clickDoneButton() {
