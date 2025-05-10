@@ -26,7 +26,7 @@ public class LoginPage {
 	    private WebElement passwordElement;
 	    @FindBy(id = "com.example.app:id/loginButton")
 	    private WebElement loginButtonElement;
-	    @FindBy(xpath = "//android.widget.EditText[@text=\"welldata.net\"]")
+	    @FindBy(xpath = "")
 	    private WebElement serverDropdown;
 	    @FindBy(xpath = "//android.widget.TextView[@resource-id=\"android:id/text1\" and @text=\"Add New +\"]")
 	    private WebElement addNewServer;
