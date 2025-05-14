@@ -7,7 +7,7 @@ import com.automation.base.BaseTest;
 import com.automation.pages.AlertsFramesWindowsPage;
 import com.automation.utils.WebDriverUtils;
 
-public abstract class AlertsTest extends BaseTest {
+public  class AlertsTest extends BaseTest {
 
 	@Test
 	public void testAlerts() {

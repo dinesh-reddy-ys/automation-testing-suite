@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-07T20:15:27 IST" name="Default suite" finished-at="2025-05-07T20:15:38 IST" duration-ms="11545">
+  <suite started-at="2025-05-13T09:33:35 IST" name="Default suite" finished-at="2025-05-13T09:33:57 IST" duration-ms="21901">
     <groups>
     </groups>
-    <test started-at="2025-05-07T20:15:27 IST" name="Default test" finished-at="2025-05-07T20:15:38 IST" duration-ms="11545">
-      <class name="com.orangehrm.test.LoginTest">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.orangehrm.test.LoginTest@2925bf5b]" started-at="2025-05-07T20:15:27 IST" name="setup" finished-at="2025-05-07T20:15:31 IST" duration-ms="3761" status="PASS">
+    <test started-at="2025-05-13T09:33:35 IST" name="Default test" finished-at="2025-05-13T09:33:57 IST" duration-ms="21901">
+      <class name="com.automation.tests.BookListTest">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.automation.tests.BookListTest@2925bf5b]" started-at="2025-05-13T09:33:35 IST" name="setup" finished-at="2025-05-13T09:33:39 IST" duration-ms="3954" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -16,33 +16,33 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[public void com.orangehrm.test.LoginTest.testValidLogin()]]>
+                <![CDATA[public void com.automation.tests.BookListTest.getBookList()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testValidLogin()[pri:1, instance:com.orangehrm.test.LoginTest@2925bf5b]" started-at="2025-05-07T20:15:31 IST" name="testValidLogin" finished-at="2025-05-07T20:15:38 IST" duration-ms="7093" status="PASS">
+        <test-method signature="getBookList()[pri:0, instance:com.automation.tests.BookListTest@2925bf5b]" started-at="2025-05-13T09:33:39 IST" name="getBookList" finished-at="2025-05-13T09:33:57 IST" duration-ms="17331" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testValidLogin -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.orangehrm.test.LoginTest@2925bf5b]" started-at="2025-05-07T20:15:38 IST" name="teardown" finished-at="2025-05-07T20:15:38 IST" duration-ms="599" status="PASS">
+        </test-method> <!-- getBookList -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automation.tests.BookListTest@2925bf5b]" started-at="2025-05-13T09:33:57 IST" name="teardown" finished-at="2025-05-13T09:33:57 IST" duration-ms="555" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testValidLogin status=SUCCESS method=LoginTest.testValidLogin()[pri:1, instance:com.orangehrm.test.LoginTest@2925bf5b] output={null}]]]>
+                <![CDATA[[TestResult name=getBookList status=SUCCESS method=BookListTest.getBookList()[pri:0, instance:com.automation.tests.BookListTest@2925bf5b] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="flushExtentReports()[pri:0, instance:com.orangehrm.test.LoginTest@2925bf5b]" started-at="2025-05-07T20:15:38 IST" name="flushExtentReports" finished-at="2025-05-07T20:15:39 IST" duration-ms="576" status="PASS">
+        <test-method is-config="true" signature="flushExtentReports()[pri:0, instance:com.automation.tests.BookListTest@2925bf5b]" started-at="2025-05-13T09:33:57 IST" name="flushExtentReports" finished-at="2025-05-13T09:33:58 IST" duration-ms="368" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- flushExtentReports -->
-      </class> <!-- com.orangehrm.test.LoginTest -->
+      </class> <!-- com.automation.tests.BookListTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

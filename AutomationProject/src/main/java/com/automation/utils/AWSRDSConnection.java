@@ -6,6 +6,8 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 
 public class AWSRDSConnection {
+	
+	static Connection connection = null;
     public static void main(String[] args) {
         // AWS RDS connection details
     	String url = "jdbc:mysql://database-automation.cxw4asaa4fwp.eu-north-1.rds.amazonaws.com:3306/database-automation";
@@ -15,24 +17,27 @@ public class AWSRDSConnection {
 
         try {
             // Load the MySQL JDBC driver
-            Class.forName("com.mysql.cj.jdbc.Driver");
+            //Class.forName("com.mysql.cj.jdbc.Driver");
 
             // Establish the connection
-            Connection connection = DriverManager.getConnection(url, username, password);
+            //Connection connection = DriverManager.getConnection(url, username, password);
             System.out.println("Connected to AWS RDS!");
+            if (connection == null || connection.isClosed()) {
+                connection = DriverManager.getConnection(url, username, password);
+            }
 
             // Create a statement
-            Statement statement = connection.createStatement();
+            //Statement statement = connection.createStatement();
 
             // Execute a query
-            String query = "SELECT * FROM your_table";
-            ResultSet resultSet = statement.executeQuery(query);
+            //String query = "SELECT * FROM your_table";
+            //ResultSet resultSet = statement.executeQuery(query);
 
             // Process the result set
-            while (resultSet.next()) {
-                System.out.println("Column1: " + resultSet.getString("column1"));
-                System.out.println("Column2: " + resultSet.getString("column2"));
-            }
+//            while (resultSet.next()) {
+//                System.out.println("Column1: " + resultSet.getString("column1"));
+//                System.out.println("Column2: " + resultSet.getString("column2"));
+//            }
 
             // Close the connection
             connection.close();

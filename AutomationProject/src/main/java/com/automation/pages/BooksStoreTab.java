@@ -1,7 +1,9 @@
 package com.automation.pages;
 
 import java.time.Duration;
+import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -23,11 +25,14 @@ public class BooksStoreTab {
 	private WebElement userName;
 	@FindBy(id="password")
 	private WebElement password;
+	@FindBy(xpath="//*[@class='mr-2']")
+	private WebElement booksTitle;
+	
 	
 	
 	public BooksStoreTab() {
 		this.driver = WebDriverUtils.getDriver();
-		this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		this.wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		if (this.driver == null) {
 			throw new IllegalStateException("Driver is not initialized before calling HomePage constructor");
 		}
@@ -63,6 +68,28 @@ public class BooksStoreTab {
 		wait.until(ExpectedConditions.elementToBeClickable(loginTab));
 		loginTab.click();
 	}
+	
+	//Get all books titles from the Book Store using findElements
+	public void getAllBooksTitle() {
+		wait.until(ExpectedConditions.visibilityOf(booksTitle));
+		ScrollUtils.scrollToElement(booksTitle);
+		wait.until(ExpectedConditions.elementToBeClickable(booksTitle));
+		//Get text of all books
+		List<WebElement> books = driver.findElements(By.xpath("//div[@class='action-buttons']/preceding-sibling::div[@class='rt-tr-group']"));
+		//Store the text of all books in a String array
+		String[] booksTitle = new String[books.size()];
+		for (int i = 0; i < books.size(); i++) {
+			booksTitle[i] = books.get(i).getText();
+			System.out.println(booksTitle[i]);
+		}
+		//Print the text of all books
+		System.out.println("All books titles are: "+booksTitle);
+		
+		
+		
+	}
+	
+	
 	
 	
 

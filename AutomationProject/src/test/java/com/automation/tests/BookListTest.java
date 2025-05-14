@@ -4,26 +4,29 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
 import com.automation.base.BaseTest;
+import com.automation.pages.BooksStoreTab;
 import com.automation.pages.HomePage;
 import com.automation.utils.ScreenshotUtils;
 import com.automation.utils.WebDriverUtils;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
+import com.restapi.utils.GetAllBooks;
 
 
-public abstract class BookListTest extends BaseTest {
+public  class BookListTest extends BaseTest {
 
 	@Test
 	public void getBookList() {
 
-		
+		GetAllBooks allBooks = new GetAllBooks();
+		System.out.println(allBooks.getAllBooks());
 		ExtentTest log = getTest();
-        WebDriverUtils.getDriver().get("https://demoqa.com");
+        WebDriverUtils.getDriver().get("https://demoqa.com/books");
 		log.info("Navigated to website");
-		HomePage homePage = new HomePage();
-		homePage.scrollToBookStoreAndClick();
+		BooksStoreTab booksTab = new BooksStoreTab();
+		booksTab.getAllBooksTitle();
 		try {
-			Thread.sleep(200000);
+			Thread.sleep(2000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

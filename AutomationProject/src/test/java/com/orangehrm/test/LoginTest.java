@@ -10,7 +10,7 @@ import com.orangehrm.pages.HomePage;
 import com.orangehrm.pages.LoginPage;
 
 public class LoginTest extends BaseTest {
-	@Override
+	
 	@Test(priority = 1)
 	public void testValidLogin() {
 		WebDriverUtils.getDriver().get("https://opensource-demo.orangehrmlive.com");
@@ -22,7 +22,7 @@ public class LoginTest extends BaseTest {
 		home.verifyElement();
 				
 	}
-	@Override
+	
 	@Test(priority = 2)
 	public void testInvalidPassword() {
 		WebDriverUtils.getDriver().get("https://opensource-demo.orangehrmlive.com");
