@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-13T09:33:35 IST" name="Default suite" finished-at="2025-05-13T09:33:57 IST" duration-ms="21901">
+  <suite started-at="2025-05-25T08:45:12 IST" name="Default suite" finished-at="2025-05-25T08:45:22 IST" duration-ms="9320">
     <groups>
     </groups>
-    <test started-at="2025-05-13T09:33:35 IST" name="Default test" finished-at="2025-05-13T09:33:57 IST" duration-ms="21901">
-      <class name="com.automation.tests.BookListTest">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.automation.tests.BookListTest@2925bf5b]" started-at="2025-05-13T09:33:35 IST" name="setup" finished-at="2025-05-13T09:33:39 IST" duration-ms="3954" status="PASS">
+    <test started-at="2025-05-25T08:45:12 IST" name="Default test" finished-at="2025-05-25T08:45:22 IST" duration-ms="9320">
+      <class name="com.automation.tests.LoginTest">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.reflect.Method)[pri:0, instance:com.automation.tests.LoginTest@710f4dc7]" started-at="2025-05-25T08:45:12 IST" name="setup" finished-at="2025-05-25T08:45:15 IST" duration-ms="2586" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -16,33 +16,33 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[public void com.automation.tests.BookListTest.getBookList()]]>
+                <![CDATA[public void com.automation.tests.LoginTest.getAllPrices()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="getBookList()[pri:0, instance:com.automation.tests.BookListTest@2925bf5b]" started-at="2025-05-13T09:33:39 IST" name="getBookList" finished-at="2025-05-13T09:33:57 IST" duration-ms="17331" status="PASS">
+        <test-method signature="getAllPrices()[pri:0, instance:com.automation.tests.LoginTest@710f4dc7]" started-at="2025-05-25T08:45:15 IST" name="getAllPrices" finished-at="2025-05-25T08:45:22 IST" duration-ms="6678" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getBookList -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automation.tests.BookListTest@2925bf5b]" started-at="2025-05-13T09:33:57 IST" name="teardown" finished-at="2025-05-13T09:33:57 IST" duration-ms="555" status="PASS">
+        </test-method> <!-- getAllPrices -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.automation.tests.LoginTest@710f4dc7]" started-at="2025-05-25T08:45:22 IST" name="teardown" finished-at="2025-05-25T08:45:22 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=getBookList status=SUCCESS method=BookListTest.getBookList()[pri:0, instance:com.automation.tests.BookListTest@2925bf5b] output={null}]]]>
+                <![CDATA[[TestResult name=getAllPrices status=SUCCESS method=LoginTest.getAllPrices()[pri:0, instance:com.automation.tests.LoginTest@710f4dc7] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="flushExtentReports()[pri:0, instance:com.automation.tests.BookListTest@2925bf5b]" started-at="2025-05-13T09:33:57 IST" name="flushExtentReports" finished-at="2025-05-13T09:33:58 IST" duration-ms="368" status="PASS">
+        <test-method is-config="true" signature="flushExtentReports()[pri:0, instance:com.automation.tests.LoginTest@710f4dc7]" started-at="2025-05-25T08:45:22 IST" name="flushExtentReports" finished-at="2025-05-25T08:45:22 IST" duration-ms="352" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- flushExtentReports -->
-      </class> <!-- com.automation.tests.BookListTest -->
+      </class> <!-- com.automation.tests.LoginTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

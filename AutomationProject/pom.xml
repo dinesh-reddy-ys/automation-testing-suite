@@ -1,4 +1,4 @@
-	<project xmlns="http://maven.apache.org/POM/4.0.0"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
@@ -10,20 +10,20 @@
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
-			<version>4.11.0</version> <!-- Use the latest version -->
+			<version>4.33.0</version> <!-- Use the latest version -->
 		</dependency>
 		<!-- TestNG -->
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>7.8.0</version>
-			
+
 		</dependency>
 		<!-- WebDriverManager (for auto driver management) -->
 		<dependency>
 			<groupId>io.github.bonigarcia</groupId>
 			<artifactId>webdrivermanager</artifactId>
-			<version>5.6.0</version>
+			<version>6.1.0</version>
 		</dependency>
 
 		<!-- Extent Reports -->
@@ -32,37 +32,32 @@
 			<artifactId>extentreports</artifactId>
 			<version>5.1.1</version>
 		</dependency>
-		<!-- This allows you to use FileUtils.copyDirectory(...) to copy entire
-		folders easily.-->
-		<dependency>
-			<groupId>commons-io</groupId>
-			<artifactId>commons-io</artifactId>
-			<version>2.11.0</version>
-		</dependency>
-		<!-- rest-assured -->
-		<dependency>
-			<groupId>io.rest-assured</groupId>
-			<artifactId>rest-assured</artifactId>
-			<version>5.5.1</version>
-		</dependency>
+
 		<!-- json  -->
 		<dependency>
 			<groupId>org.json</groupId>
 			<artifactId>json</artifactId>
 			<version>20250107</version>
 		</dependency>
-		 <!-- Appium -->
-        <dependency>
-            <groupId>io.appium</groupId>
-            <artifactId>java-client</artifactId>
-            <version>8.5.1</version>
-        </dependency>
-        <!-- jdbc driver-->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.33</version>
-        </dependency>
-        
+		<!-- Appium -->
+		<dependency>
+			<groupId>io.appium</groupId>
+			<artifactId>java-client</artifactId>
+			<version>8.5.1</version>
+		</dependency>
+		<!-- jdbc driver-->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.33</version>
+		</dependency>
+		<!-- rest assured -->
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>5.5.5</version>
+			
+		</dependency>
+
 	</dependencies>
 </project>

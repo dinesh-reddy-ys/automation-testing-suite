@@ -76,8 +76,7 @@ public class LoginPage {
 	        loginButtonElement.click();
 	    }
 	    public void clickAllowButton() {
-	        	    	//wait for the allow button to be visible
-	        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	        	    	
 	    	// Click on the allow button
 	        WebElement allowButton = driver.findElement(By.id("com.android.permissioncontroller:id/permission_allow_button"));
 	        allowButton.click();

@@ -1,6 +1,9 @@
 package com.automation.tests;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 import com.automation.base.BaseTest;
@@ -32,6 +35,31 @@ public  class BookListTest extends BaseTest {
 			e.printStackTrace();
 		}
 							
+	}
+	
+	@Test
+	public void dragAndDrop() {
+		WebDriver driver = WebDriverUtils.getDriver();
+		driver.get("https://demoqa.com/droppable");
+		ExtentTest log = getTest();
+		log.log(Status.INFO, "Navigated to website");
+//		BooksStoreTab booksTab = new BooksStoreTab();
+//		booksTab.dragAndDrop();
+//		ScreenshotUtils.takeScreenshot(driver, "dragAndDrop");
+		
+		WebElement source = driver.findElement(By.id("draggable"));
+		WebElement target = driver.findElement(By.id("droppable"));
+		log.log(Status.INFO, "Drag and drop");
+		
+		Actions action = new Actions(driver);
+		action.dragAndDrop(source, target).perform();
+		
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		
 	}
 
 }

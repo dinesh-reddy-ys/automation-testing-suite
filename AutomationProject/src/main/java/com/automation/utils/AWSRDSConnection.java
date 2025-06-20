@@ -1,49 +1,49 @@
 package com.automation.utils;
 
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.PreparedStatement;
+import java.util.Properties;
 
 public class AWSRDSConnection {
-	
-	static Connection connection = null;
+
     public static void main(String[] args) {
-        // AWS RDS connection details
-    	String url = "jdbc:mysql://database-automation.cxw4asaa4fwp.eu-north-1.rds.amazonaws.com:3306/database-automation";
+        Properties properties = new Properties();
 
-        String username = "dineshreddy";
-        String password = "IloveTechStuff";
+        // Load properties from the configuration file
+        try (FileInputStream fis = new FileInputStream("src/main/resources/application.properties")) {
+            properties.load(fis);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return;
+        }
 
-        try {
-            // Load the MySQL JDBC driver
-            //Class.forName("com.mysql.cj.jdbc.Driver");
+        // Retrieve database connection details
+        String url = properties.getProperty("db.url");
+        String username = properties.getProperty("db.username");
+        String password = properties.getProperty("db.password");
 
-            // Establish the connection
-            //Connection connection = DriverManager.getConnection(url, username, password);
-            System.out.println("Connected to AWS RDS!");
-            if (connection == null || connection.isClosed()) {
-                connection = DriverManager.getConnection(url, username, password);
-            }
+        // Insert a user into the database
+        String user = "dineshreddy123";
+        String email = "dineshreddy@example.com";
+        String pass = "12345"; // Note: hash this in a real-world scenario
 
-            // Create a statement
-            //Statement statement = connection.createStatement();
+        String insertQuery = "INSERT INTO users (username, email, password) VALUES (?, ?, ?)";
 
-            // Execute a query
-            //String query = "SELECT * FROM your_table";
-            //ResultSet resultSet = statement.executeQuery(query);
+        try (Connection conn = DriverManager.getConnection(url, username, password);
+             PreparedStatement stmt = conn.prepareStatement(insertQuery)) {
 
-            // Process the result set
-//            while (resultSet.next()) {
-//                System.out.println("Column1: " + resultSet.getString("column1"));
-//                System.out.println("Column2: " + resultSet.getString("column2"));
-//            }
+            stmt.setString(1, user);
+            stmt.setString(2, email);
+            stmt.setString(3, pass);
 
-            // Close the connection
-            connection.close();
+            int rowsInserted = stmt.executeUpdate();
+            System.out.println(rowsInserted + " row(s) inserted successfully!");
+
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 }
-

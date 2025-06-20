@@ -19,12 +19,7 @@ public  class AlertsTest extends BaseTest {
 		alerts.selectAlerts();
 		alerts.clickAlertButton();
 		alerts.switchToAlert();
-		try {
-			Thread.sleep(50000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+
 	}
 
 	@Test()
@@ -39,12 +34,7 @@ public  class AlertsTest extends BaseTest {
 		// frames.getFrameText();
 		System.out.println(frames.getFrameText());
 		Assert.assertEquals(frames.getFrameText(), "This is a sample page", "Content from iframe is not as expected");
-		try {
-			Thread.sleep(50000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+
 	}
 
 	@Test
